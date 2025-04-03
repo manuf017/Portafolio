@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web | Manuel Fraga</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MANUEL FRAGA</h1>
+            <button id="toggle-theme">🌙</button>
+        </header>
+        
+        <div class="section" id="profile">
+            <img src="manu.jpg" alt="Foto de perfil" id="profile-img">
+            <h2>Manuel Fraga</h2>
+            <p>Desarrollador web con experiencia en tecnologías modernas y diseño responsivo.</p>
+        </div>
+
+        <div class="grid">
+            <div class="section" id="contact">
+                <h2>Contacto</h2>
+                <p>📧 <a href="mailto:mfraga745@gmail.com">mfraga745@gmail.com</a></p>
+                <p>📞 +3547 6308 38</p>
+                <p>🔗 <a href="https://github.com/manuf017" target="_blank">GitHub</a></p>
+                <p>💼 <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a></p>
+            </div>
+            
+            <div class="section" id="projects">
+                <h2>Proyectos</h2>
+                <div class="project">
+                    <img src="project1.jpg" alt="Proyecto 1">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeButton = document.getElementById("toggle-theme");
+            
+            themeButton.addEventListener("click", function() {
+                document.body.classList.toggle("dark-mode");
+                themeButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+            });
+        });
+    </script>
+</body>
+</html>
